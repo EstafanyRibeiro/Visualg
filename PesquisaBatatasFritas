@@ -1,0 +1,39 @@
+Algoritmo "semnome"
+// Descrição   : Pesquisa sobre um novo sabor de batatas fritas.
+   // Autor(a)    : Estafany Ribeiro
+   // Data atual  : 26/10/2020
+Var
+   // Seção de Declarações das variáveis
+   nome, resposta: caractere
+   pessoas_gostaram: real
+   pessoas_n_gostaram: real
+   porcent_menos_18: real
+   idade: inteiro
+
+
+Inicio
+   // Seção de Comandos, procedimento, funções, operadores, etc...
+   escreval("Qual é o seu nome?")
+   leia(nome)
+   escreval("Qual é a sua idade?")
+   leia(idade)
+
+   escreval("Gostou do novo sabor de batatas fritas lançado?")
+   leia(resposta)
+   se (resposta="Sim")ou (resposta="sim") entao
+      pessoas_gostaram <- pessoas_gostaram+1
+   fimse
+   se (resposta="Não") ou (resposta="não") ou (resposta="nao") entao
+      pessoas_n_gostaram <- pessoas_n_gostaram+1
+   fimse
+   se (idade < 18) e (resposta="Sim") ou (resposta="sim") entao
+      porcent_menos_18 <- porcent_menos_18+1
+      porcent_menos_18 <- (porcent_menos_18/100)
+   fimse
+   escreval("Quantidade de pessoas que gostaram do novo sabor de batatas fritas: ",pessoas_gostaram)
+   escreval("Quantidade de pessoas que não gostaram do novo sabor de batatas fritas:",pessoas_n_gostaram)
+   escreval("Porcentagem de pessoas com menos de 18 anos que gostaram do novo sabor de batatas fritas: ",porcent_menos_18)
+
+
+
+Fimalgoritmo
